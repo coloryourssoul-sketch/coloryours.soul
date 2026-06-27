@@ -111,10 +111,11 @@ export default function BookingPage() {
 
 
             {days.map((day) => (
-              <div key={day} className="min-h-36 border border-gray-100 p-3">
+              <div key={day} className="flex min-h-36 flex-col border border-gray-100 p-2"
+>
                 <div className="mb-3 text-sm text-gray-500">{day}</div>
 
-                <div className="space-y-2">
+                <div className="flex flex-1 flex-col items-center justify-center space-y-2">
                   {times.map((time) => {
                     const isBooked = checkBooked(day, time);
 
@@ -125,11 +126,11 @@ export default function BookingPage() {
                           backgroundColor: "#FFE1E6",
                           color: "#E11D48",
                           borderRadius: "5px",
-                          width: "38px",
+                          width: "30px",
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "9px",
+                          fontSize: "4px",
                           textDecoration: "line-through",
                         }}
                       >
@@ -145,11 +146,11 @@ export default function BookingPage() {
                           backgroundColor: "#CFFAE2",
                           color: "#047857",
                           borderRadius: "5px",
-                          width: "38px",
+                          width: "30px",
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "9px",
+                          fontSize: "4px",
                           textDecoration: "none",
                         }}
                       >
