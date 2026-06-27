@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,9 +12,12 @@ export default function Home() {
         Personal Color Analysis Studio
       </p>
 
-      <button className="mt-10 rounded-full border border-black px-8 py-3 hover:bg-black hover:text-white transition">
+      <Link
+        href="/booking"
+        className="mt-10 rounded-full border border-black px-8 py-3 hover:bg-black hover:text-white transition"
+      >
         BOOKING
-      </button>
+      </Link>
     </main>
   );
 }
