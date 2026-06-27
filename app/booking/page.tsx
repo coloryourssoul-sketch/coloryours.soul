@@ -87,7 +87,7 @@ export default function BookingPage() {
 
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <span>🔴</span>
-              <span>Booked</span>
+              <span>Full Booked</span>
             </div>
           </div>
         </div>
@@ -126,12 +126,13 @@ export default function BookingPage() {
                           backgroundColor: "#FFE1E6",
                           color: "#E11D48",
                           borderRadius: "5px",
-                          width: "30px",
+                          width: "35px",
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "4px",
+                          fontSize: "10px",
                           textDecoration: "line-through",
+                          fontWeight: 500,
                         }}
                       >
                         {time}
@@ -146,12 +147,13 @@ export default function BookingPage() {
                           backgroundColor: "#CFFAE2",
                           color: "#047857",
                           borderRadius: "5px",
-                          width: "30px",
+                          width: "35px",
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "4px",
+                          fontSize: "10px",
                           textDecoration: "none",
+                          fontWeight: 500,
                         }}
                       >
                         {time}
