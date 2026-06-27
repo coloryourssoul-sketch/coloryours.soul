@@ -4,16 +4,16 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-white">
-<h1 className="text-center text-3xl sm:text-5xl font-light tracking-[0.15em] sm:tracking-[0.3em] leading-tight">
+<h1 className="px-6 text-center text-3xl sm:text-5xl font-light tracking-[0.18em] sm:tracking-[0.3em] leading-tight">
   COLOR YOURS SOUL
 </h1>
 
-<p className="mt-6 text-gray-500 text-lg">
+<p className="mt-6 px-6 text-center text-base sm:text-lg text-gray-500">
   Personal Color Analysis & Image Consulting
 </p>
 
-<p className="mt-4 max-w-md text-center text-gray-400">
-  Discover the colors that bring out your natural beauty and confidence.✨
+<p className="mt-4 max-w-md px-8 text-center text-sm sm:text-base text-gray-400 leading-relaxed">
+  Discover the colors that bring out your natural beauty and confidence. ✨
 </p>
 
       <Link
