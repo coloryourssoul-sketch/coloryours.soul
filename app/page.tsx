@@ -8,9 +8,13 @@ export default function Home() {
         COLOR YOURS SOUL
       </h1>
 
-      <p className="mt-6 text-gray-500 text-lg">
-        Personal Color Analysis Studio
-      </p>
+<p className="mt-6 text-gray-500 text-lg">
+  Personal Color Analysis & Image Consulting
+</p>
+
+<p className="mt-4 max-w-md text-center text-gray-400">
+  Discover the colors that bring out your natural beauty and confidence.✨
+</p>
 
       <Link
         href="/booking"
