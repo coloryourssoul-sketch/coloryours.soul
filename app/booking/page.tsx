@@ -50,7 +50,7 @@ export default function BookingPage() {
         </h1>
 
         <div className="flex items-center gap-6 sm:gap-8">
-          <div className="text-xs text-gray-400">EN | TH</div>
+        
 
           <a
             href="/"
@@ -142,6 +142,8 @@ export default function BookingPage() {
                         key={time}
                         href="https://lin.ee/uSyQioK"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-md active:scale-95"
                         style={{
                           display: "block",
                           backgroundColor: "#CFFAE2",
