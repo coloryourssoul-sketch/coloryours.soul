@@ -125,11 +125,11 @@ export default function BookingPage() {
                           backgroundColor: "#FFE1E6",
                           color: "#E11D48",
                           borderRadius: "5px",
-                          width: "42px",
+                          width: "38px",
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "12px",
+                          fontSize: "9px",
                           textDecoration: "line-through",
                         }}
                       >
@@ -145,11 +145,11 @@ export default function BookingPage() {
                           backgroundColor: "#CFFAE2",
                           color: "#047857",
                           borderRadius: "5px",
-                          width: "42px",
+                          width: "38px",
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "12px",
+                          fontSize: "9px",
                           textDecoration: "none",
                         }}
                       >
