@@ -93,7 +93,7 @@ export default function BookingPage() {
         </div>
 
         <div className="mt-10 overflow-x-auto pb-4">
-          <div className="grid min-w-[820px] grid-cols-7 overflow-hidden rounded-3xl border border-gray-200">
+  <div className="grid min-w-[980px] grid-cols-7 overflow-hidden rounded-3xl border border-gray-200">
             {weekDays.map((day) => (
               <div
                 key={day}
@@ -114,7 +114,7 @@ export default function BookingPage() {
               <div key={day} className="min-h-36 border border-gray-100 p-3">
                 <div className="mb-3 text-sm text-gray-500">{day}</div>
 
-                <div className="space-y-7\4">
+                <div className="space-y-5">
                   {times.map((time) => {
                     const isBooked = checkBooked(day, time);
 
