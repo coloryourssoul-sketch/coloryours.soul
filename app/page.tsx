@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-white">
-     <h1 className="text-center text-4xl sm:text-5xl font-light tracking-[0.25em] sm:tracking-[0.3em] leading-tight">
+<h1 className="text-center text-3xl sm:text-5xl font-light tracking-[0.15em] sm:tracking-[0.3em] leading-tight">
   COLOR YOURS SOUL
 </h1>
 
