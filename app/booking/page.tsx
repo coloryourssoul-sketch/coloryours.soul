@@ -143,9 +143,9 @@ export default function BookingPage() {
                         href="https://lin.ee/uSyQioK"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-md active:scale-95"
+                        className="booking-time"
                         style={{
-                          display: "block",
+                          display: "inline-block",
                           backgroundColor: "#CFFAE2",
                           color: "#047857",
                           borderRadius: "5px",
