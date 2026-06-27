@@ -4,13 +4,8 @@ import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 
 const year = 2026;
-const month = 6;
-const monthName = "July 2026";
 
 const times = ["09:30", "12:30", "15:30"];
-const daysInMonth = new Date(year, month + 1, 0).getDate();
-const firstDayOfMonth = new Date(year, month, 1).getDay();
-const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 type Slot = {
@@ -22,6 +17,12 @@ type Slot = {
 
 export default function BookingPage() {
   const [slots, setSlots] = useState<Slot[]>([]);
+  const [month, setMonth] = useState(6);
+
+  const monthName = month === 6 ? "July 2026" : "August 2026";
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDayOfMonth = new Date(year, month, 1).getDay();
+  const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
   async function fetchSlots() {
     const { data } = await supabase.from("slots").select("*");
@@ -50,8 +51,6 @@ export default function BookingPage() {
         </h1>
 
         <div className="flex items-center gap-6 sm:gap-8">
-        
-
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-full border border-black px-8 py-3 text-sm tracking-wide transition-all duration-300 hover:bg-black hover:text-white"
@@ -66,6 +65,26 @@ export default function BookingPage() {
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-gray-400">
             Booking Calendar
           </p>
+
+          <div className="mb-5 flex justify-center gap-3 sm:justify-start">
+            <button
+              onClick={() => setMonth(6)}
+              className={`rounded-full border px-5 py-2 text-sm ${
+                month === 6 ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
+              July
+            </button>
+
+            <button
+              onClick={() => setMonth(7)}
+              className={`rounded-full border px-5 py-2 text-sm ${
+                month === 7 ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
+              August
+            </button>
+          </div>
 
           <h2 className="text-3xl font-light tracking-[0.12em] sm:text-5xl sm:tracking-[0.25em]">
             {monthName}
@@ -91,28 +110,30 @@ export default function BookingPage() {
             </div>
           </div>
         </div>
+
         <div className="mt-10 pb-4">
-  <div className="grid w-full grid-cols-7 overflow-hidden rounded-2xl border border-gray-200 sm:rounded-3xl">
+          <div className="grid w-full grid-cols-7 overflow-hidden rounded-2xl border border-gray-200 sm:rounded-3xl">
             {weekDays.map((day) => (
-  <div
-    key={day}
-    className="border-b border-gray-200 px-1 py-3 text-center text-[10px] tracking-[0.12em] text-gray-400 sm:p-4 sm:text-sm sm:tracking-[0.25em]"
-  >
-    {day}
-  </div>
-))}
+              <div
+                key={day}
+                className="border-b border-gray-200 px-1 py-3 text-center text-[10px] tracking-[0.12em] text-gray-400 sm:p-4 sm:text-sm sm:tracking-[0.25em]"
+              >
+                {day}
+              </div>
+            ))}
 
-{Array.from({ length: firstDayOfMonth }).map((_, index) => (
-  <div
-    key={`empty-${index}`}
-    className="min-h-28 border border-gray-100 bg-white sm:min-h-36"
-  />
-))}
-
+            {Array.from({ length: firstDayOfMonth }).map((_, index) => (
+              <div
+                key={`empty-${index}`}
+                className="min-h-28 border border-gray-100 bg-white sm:min-h-36"
+              />
+            ))}
 
             {days.map((day) => (
-              <div key={day} className="flex min-h-36 flex-col border border-gray-100 p-2"
->
+              <div
+                key={day}
+                className="flex min-h-36 flex-col border border-gray-100 p-2"
+              >
                 <div className="mb-3 text-sm text-gray-500">{day}</div>
 
                 <div className="flex flex-1 flex-col items-center justify-center space-y-2">
