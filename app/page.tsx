@@ -12,16 +12,16 @@ export default function Home() {
   Personal Color Analysis & Image Consulting
 </p>
 
-<p className="mt-4 max-w-md px-8 text-center text-sm sm:text-base text-gray-400 leading-relaxed">
+<p className="mt-4 max-w-lg px-8 text-center text-sm sm:text-base text-gray-400 leading-relaxed">
   Discover the colors that bring out your natural beauty and confidence. ✨
 </p>
 
-      <Link
-        href="/booking"
-        className="mt-10 rounded-full border border-black px-8 py-3 hover:bg-black hover:text-white transition"
-      >
-        BOOKING
-      </Link>
+<Link
+  href="/booking"
+  className="mt-10 rounded-full border border-black px-8 py-3 hover:bg-black hover:text-white hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm hover:shadow-lg"
+>
+  BOOKING
+</Link>
     </main>
   );
 }
