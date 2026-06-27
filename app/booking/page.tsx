@@ -129,6 +129,7 @@ export default function BookingPage() {
                           margin: "0 auto",
                           padding: "4px 8px",
                           textAlign: "center",
+                          fontSize: "12px",
                           textDecoration: "line-through",
                         }}
                       >
@@ -148,6 +149,7 @@ export default function BookingPage() {
                           margin: "0 auto",
                           padding: "4px 8px",
                           textAlign: "center",
+                          fontSize: "12px",
                           textDecoration: "none",
                         }}
                       >
