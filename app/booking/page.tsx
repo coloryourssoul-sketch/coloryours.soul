@@ -44,7 +44,7 @@ export default function BookingPage() {
 
   return (
     <main className="min-h-screen bg-white px-4 py-10 sm:px-8 sm:py-10">
-      <header className="mx-auto mt-6 mb-10 flex max-w-6xl items-center justify-between gap-3">
+      <header className="mx-auto mb-10 flex max-w-6xl items-center justify-between gap-3">
         <h1 className="text-sm font-light tracking-[0.14em] sm:text-2xl sm:tracking-[0.3em]">
           COLOR YOURS SOUL
         </h1>
@@ -54,7 +54,7 @@ export default function BookingPage() {
 
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-full border border-black px-8 py-2 text-sm tracking-wide transition-all duration-300 hover:bg-black hover:text-white"
+            className="inline-flex items-center justify-center rounded-full border border-black px-8 py-3 text-sm tracking-wide transition-all duration-300 hover:bg-black hover:text-white"
           >
             HOME
           </a>
@@ -91,30 +91,30 @@ export default function BookingPage() {
             </div>
           </div>
         </div>
-
-        <div className="mt-10 overflow-x-auto pb-4">
-  <div className="grid min-w-[980px] grid-cols-7 overflow-hidden rounded-3xl border border-gray-200">
+        <div className="mt-10 pb-4">
+  <div className="grid w-full grid-cols-7 overflow-hidden rounded-2xl border border-gray-200 sm:rounded-3xl">
             {weekDays.map((day) => (
-              <div
-                key={day}
-                className="border-b border-gray-200 p-4 text-center text-sm tracking-[0.25em] text-gray-400"
-              >
-                {day}
-              </div>
-            ))}
+  <div
+    key={day}
+    className="border-b border-gray-200 px-1 py-3 text-center text-[10px] tracking-[0.12em] text-gray-400 sm:p-4 sm:text-sm sm:tracking-[0.25em]"
+  >
+    {day}
+  </div>
+))}
 
-            {Array.from({ length: firstDayOfMonth }).map((_, index) => (
-              <div
-                key={`empty-${index}`}
-                className="min-h-36 border border-gray-100 bg-white"
-              />
-            ))}
+{Array.from({ length: firstDayOfMonth }).map((_, index) => (
+  <div
+    key={`empty-${index}`}
+    className="min-h-28 border border-gray-100 bg-white sm:min-h-36"
+  />
+))}
+
 
             {days.map((day) => (
               <div key={day} className="min-h-36 border border-gray-100 p-3">
                 <div className="mb-3 text-sm text-gray-500">{day}</div>
 
-                <div className="space-y-5">
+                <div className="space-y-2">
                   {times.map((time) => {
                     const isBooked = checkBooked(day, time);
 
@@ -124,14 +124,12 @@ export default function BookingPage() {
                         style={{
                           backgroundColor: "#FFE1E6",
                           color: "#E11D48",
-                            borderRadius: "10px",
-                            width: "84px",
-                            margin: "0 auto",
-                            padding: "6px 0",
-                            textAlign: "center",
-                            textDecoration: "line-through",
-                            fontSize: "14px",
-                            fontWeight: 500,
+                          borderRadius: "5px",
+                          width: "80px",
+                          margin: "0 auto",
+                          padding: "4px 8px",
+                          textAlign: "center",
+                          textDecoration: "line-through",
                         }}
                       >
                         {time}
@@ -145,14 +143,12 @@ export default function BookingPage() {
                           display: "block",
                           backgroundColor: "#CFFAE2",
                           color: "#047857",
-                          borderRadius: "10px",
-                            width: "84px",
-                            margin: "0 auto",
-                            padding: "6px 0",
+                          borderRadius: "5px",
+                          width: "80px",
+                          margin: "0 auto",
+                          padding: "4px 8px",
                           textAlign: "center",
-                         textDecoration: "none",
-                         fontSize: "14px",
-                         fontWeight: 500,
+                          textDecoration: "none",
                         }}
                       >
                         {time}
