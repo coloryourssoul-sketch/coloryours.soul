@@ -130,7 +130,7 @@ export default function BookingPage() {
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "10px",
+                          fontSize: "15px",
                           textDecoration: "line-through",
                           fontWeight: 500,
                         }}
@@ -151,7 +151,7 @@ export default function BookingPage() {
                           margin: "0 auto",
                           padding: "4px 2px",
                           textAlign: "center",
-                          fontSize: "10px",
+                          fontSize: "15px",
                           textDecoration: "none",
                           fontWeight: 500,
                         }}
